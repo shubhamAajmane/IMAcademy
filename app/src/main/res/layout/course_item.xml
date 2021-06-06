@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/courseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_view_margin"
+    app:cardCornerRadius="@dimen/card_radius">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCourseIcon"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:padding="@dimen/image_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_background" />
+
+        <TextView
+            android:id="@+id/tvCourseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivCourseIcon"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_toEndOf="@id/ivCourseIcon"
+            android:text="Title of Course"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStartingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCourseName"
+            android:layout_alignStart="@id/tvCourseName"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Starting from 23rd july" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

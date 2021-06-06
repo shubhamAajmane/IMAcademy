@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/menuHome">
+
+    <fragment
+        android:id="@+id/menuStudyMaterial"
+        android:name="org.indianmusicacademy.packages.fragments.StudyMaterial"
+        android:label="@string/study_material"
+        tools:layout="@layout/fragment_study_material" />
+
+    <fragment
+        android:id="@+id/menuAttendance"
+        android:name="org.indianmusicacademy.packages.fragments.Attendance"
+        android:label="@string/attendance"
+        tools:layout="@layout/fragment_attendance" />
+
+    <fragment
+        android:id="@+id/menuSettings"
+        android:name="org.indianmusicacademy.packages.fragments.Settings"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/menuHome"
+        android:name="org.indianmusicacademy.packages.fragments.Home"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/menuBatches"
+        android:name="org.indianmusicacademy.packages.fragments.Batches"
+        android:label="@string/batches"
+        tools:layout="@layout/fragment_batches"/>
+
+    <fragment
+        android:id="@+id/menuMyProfile"
+        android:name="org.indianmusicacademy.packages.fragments.MyProfile"
+        android:label="@string/my_profile"
+        tools:layout="@layout/fragment_my_profile"/>
+</navigation>

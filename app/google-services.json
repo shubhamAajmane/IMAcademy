@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "773766557525",
+    "firebase_url": "https://imacademy-c072d.firebaseio.com",
+    "project_id": "imacademy-c072d",
+    "storage_bucket": "imacademy-c072d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773766557525:android:f3d1a65d0fe2ed4ebe49dc",
+        "android_client_info": {
+          "package_name": "org.indianmusicacademy.packages"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773766557525-3gp9i0dmquqao5ju6rh38hnthiskpkjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe0OQgE6FXfklWkumvKgqnVaYjK0UGFJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773766557525-3gp9i0dmquqao5ju6rh38hnthiskpkjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
