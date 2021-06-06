@@ -1,10 +1,8 @@
 package org.indianmusicacademy.packages.activities
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
@@ -13,15 +11,13 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.shreyaspatil.EasyUpiPayment.EasyUpiPayment
-import com.shreyaspatil.EasyUpiPayment.listener.PaymentStatusListener
-import com.shreyaspatil.EasyUpiPayment.model.TransactionDetails
 import org.indianmusicacademy.packages.R
 
-class Registration : AppCompatActivity(),PaymentStatusListener {
+class Registration : AppCompatActivity() {
 
     lateinit var toolbar: androidx.appcompat.widget.Toolbar
     lateinit var etName: EditText
@@ -84,21 +80,6 @@ class Registration : AppCompatActivity(),PaymentStatusListener {
                                 "Registered Successfully",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            /*payUsingUPI(
-                                etName.text.toString(),
-                                etAmount.text.toString(),
-                                tvCourseName.toString()
-                            )*/
-                            val upi = EasyUpiPayment.Builder().with(this@Registration)
-                                .setPayeeVpa(getString(R.string.upiId))
-                                .setPayeeName(etName.text.toString())
-                                .setTransactionId(etPhone.text.toString())
-                                .setTransactionRefId(etEmail.text.toString())
-                                .setDescription(tvCourseName.text.toString())
-                                .setAmount(etAmount.text.toString())
-                                .build()
-
-                            upi.startPayment()
                         }
                     }
                 }
@@ -197,30 +178,6 @@ class Registration : AppCompatActivity(),PaymentStatusListener {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
-    }
-
-    override fun onTransactionSubmitted() {
-        TODO("Not yet implemented")
-    }
-
-    override fun onTransactionCancelled() {
-        TODO("Not yet implemented")
-    }
-
-    override fun onTransactionSuccess() {
-        TODO("Not yet implemented")
-    }
-
-    override fun onAppNotFound() {
-        TODO("Not yet implemented")
-    }
-
-    override fun onTransactionCompleted(transactionDetails: TransactionDetails?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onTransactionFailed() {
-        TODO("Not yet implemented")
     }
 
     override fun onStop() {
